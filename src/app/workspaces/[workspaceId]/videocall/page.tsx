@@ -110,13 +110,24 @@
 // };
 
 // export default VCPage;
+import React from 'react';
 
-import React from 'react'
 
-const page = () => {
+// https://7700585dca04aff5d1ed.vercel.app/
+
+const Page: React.FC = () => {
   return (
-    <div>Video Calling</div>
-  )
-}
+    <div className="h-screen flex flex-col">
+      <header className="h-12 bg-gray-100 text-center flex items-center justify-center shadow-md">
+        <h1 className="text-lg font-semibold">Video Calling</h1>
+      </header>
+      <iframe
+        src="https://7700585dca04aff5d1ed.vercel.app/"
+        className="flex-grow w-full border-none"
+        title="Video Calling"
+      />
+    </div>
+  );
+};
 
-export default page
+export default Page;
