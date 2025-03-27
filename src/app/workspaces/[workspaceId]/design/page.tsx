@@ -68,7 +68,8 @@ import {
   Node,
 } from '@xyflow/react';
 
-import "reactflow/dist/style.css"; // Import React Flow styles
+import '@xyflow/react/dist/style.css';
+ // Import React Flow styles
 
 // Initial nodes and edges
 const initialNodes: Node[] = [
