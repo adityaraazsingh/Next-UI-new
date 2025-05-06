@@ -125,6 +125,21 @@ export function NavMain() {
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
+                  {item.title === "Channels" && member?.role === "admin" && (
+                    <SidebarMenuSubItem className="flex items-center justify-between">
+                      <SidebarMenuSubButton asChild>
+                        <span className="text-left">Add Channel</span>
+                      </SidebarMenuSubButton>
+                      <Button
+                        onClick={() => setOpen(true)}
+                        variant="ghost"
+                        size="iconsm"
+                        className="p-0.5 text-sm size-6 shrink-0"
+                      >
+                        <PlusIcon className="size-5" />
+                      </Button>
+                    </SidebarMenuSubItem>
+                  )}
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem
                       key={subItem.title}
@@ -135,21 +150,7 @@ export function NavMain() {
                           href={subItem.url}
                           className="flex items-center w-full"
                         >
-                          {item.title === "Direct Messages" ? (
-                            subItem.image ? (
-                              <img
-                                src={subItem.image}
-                                alt={subItem.title}
-                                className="size-6 rounded-full mr-2"
-                              />
-                            ) : (
-                              <div className="size-6 rounded-full bg-gray-700 text-white flex items-center justify-center font-semibold mr-2">
-                                {subItem.title.charAt(0).toUpperCase()}
-                              </div>
-                            )
-                          ) : (
-                            <CircleIcon className="size-4 mr-2 text-gray-500" />
-                          )}
+                          <CircleIcon className="size-4 mr-2 text-gray-500" />
                           <span className="text-left">{subItem.title}</span>
                         </a>
                       </SidebarMenuSubButton>
