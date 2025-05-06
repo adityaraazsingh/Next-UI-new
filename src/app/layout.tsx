@@ -24,9 +24,9 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const APP_NAME = "Zello";
-const APP_DEFAULT_TITLE = "Zello";
-const APP_TITLE_TEMPLATE = "%s - Zello";
+const APP_NAME = "Aether: A interactive web APP ";
+const APP_DEFAULT_TITLE = "Aether : A interactive web app";
+const APP_TITLE_TEMPLATE = "%s - Aether: A interactive web App";
 const APP_DESCRIPTION = "Zello";
 
 export const metadata: Metadata = {

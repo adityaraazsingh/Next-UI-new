@@ -43,7 +43,7 @@ export default function Home() {
       </Unauthenticated>
       <Authenticated>
         <UserButton />
-        <h1>New Layout</h1>
+        <h1>Welcome !</h1>
       </Authenticated>
     </div>
   );
